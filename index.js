@@ -1,8 +1,10 @@
 const express=require('express')
-const PORT=process.env.PORT || 3000
-
+const PORT=process.env.PORT || 3000  
 
 const app=express()
 app.listen(PORT,()  =>{
     console.log('Server has been started..')
+})
+app.get('/', function (req, res){
+    res.send('Hello')
 })
